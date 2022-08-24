@@ -10,6 +10,9 @@ while True:
 
     playerChoice = input("Rock, Paper or Scissors?:").lower()
 
+    if playerChoice == "":
+        break
+
     print("Computer picks " + computerChoice)
 
     if playerChoice == computerChoice:
@@ -35,8 +38,6 @@ while True:
         else:
             print("Player wins!")
             playerPoints += 1
-    elif playerChoice == "":
-        break
     else:
         print("Please pick a valid choice")
 
