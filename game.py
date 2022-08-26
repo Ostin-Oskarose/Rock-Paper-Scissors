@@ -1,45 +1,45 @@
 import random
 
 choices = ["rock", "paper", "scissors"]
-computerPoints = 0
-playerPoints = 0
+computer_points = 0
+player_points = 0
 
 while True:
 
-    computerChoice = random.choice(choices)
+    computer_choice = random.choice(choices)
 
-    playerChoice = input("Rock, Paper or Scissors?:").lower()
+    player_choice = input("Rock, Paper or Scissors?:").lower()
 
-    if playerChoice == "":
+    if player_choice == "":
         break
 
-    print("Computer picks " + computerChoice)
+    print("Computer picks " + computer_choice)
 
-    if playerChoice == computerChoice:
+    if player_choice == computer_choice:
         print("Draw!")
-    elif playerChoice == "rock":
-        if computerChoice == "paper":
+    elif player_choice == "rock":
+        if computer_choice == "paper":
             print("Computer wins!")
-            computerPoints += 1
+            computer_points += 1
         else:
             print("Player wins!")
-            playerPoints += 1
-    elif playerChoice == "paper":
-        if computerChoice == "scissors":
+            player_points += 1
+    elif player_choice == "paper":
+        if computer_choice == "scissors":
             print("Computer wins!")
-            computerPoints += 1
+            computer_points += 1
         else:
             print("Player wins!")
-            playerPoints += 1
-    elif playerChoice == "scissors":
-        if computerChoice == "rock":
+            player_points += 1
+    elif player_choice == "scissors":
+        if computer_choice == "rock":
             print("Computer wins!")
-            computerPoints += 1
+            computer_points += 1
         else:
             print("Player wins!")
-            playerPoints += 1
+            player_points += 1
     else:
         print("Please pick a valid choice")
 
-    print("Player score:", playerPoints)
-    print("Computer score:", computerPoints)
+    print("Player score:", player_points)
+    print("Computer score:", computer_points)
